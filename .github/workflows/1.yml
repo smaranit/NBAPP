@@ -1,0 +1,10 @@
+name: Wf-1
+on: push  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: This is steps
+      run: echo "Welcome to Github Actions"
+      
+  
