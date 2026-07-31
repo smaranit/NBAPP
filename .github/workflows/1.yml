@@ -5,6 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: This is steps
-      run: echo "Welcome to Github Actions"
+      run: |
+        echo "Welcome to Github Actions"
+        hostnamectl 
+        pwd
+        echo $USER
+        echo "******Bye****"
       
   
