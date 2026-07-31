@@ -1,5 +1,7 @@
 name: Wf-1
-on: push  
+on: 
+- push
+- workflow_dispatch  
 jobs:
   job1:
     runs-on: ubuntu-latest
