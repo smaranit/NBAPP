@@ -15,5 +15,12 @@ jobs:
         echo "******Bye****"
     - name: step2 (Check Python version)
       run: |
-          python --version     
+          python --version  
+  job2:
+    runs-on: windows-latest
+    steps:
+    - name: Window Cmds
+      run: |
+        dir 
+        echo "Testing Windows"
   
