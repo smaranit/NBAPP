@@ -4,12 +4,14 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - name: This is steps
+    - name: Step1
       run: |
         echo "Welcome to Github Actions"
         hostnamectl 
         pwd
         echo $USER
         echo "******Bye****"
-      
+    - name: step2 (Check Python version)
+      run: |
+          python --version     
   
