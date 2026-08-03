@@ -1,0 +1,14 @@
+name: Wf-3
+on: workflow_dispatch
+env:
+  APP_NAME: 'IOSAPP'
+  IMAGE_NAME: 'docker.io/sheshi/image:latest'
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Env Vars
+      run: | 
+         echo "App name is ${{ env.APP_NAME }}"
+         echo "App name is $APP_NAME "
+         echo "Image Name is ${{ env.IMAGE_NAME }}" 
