@@ -12,3 +12,12 @@ jobs:
          echo "App name is ${{ env.APP_NAME }}"
          echo "App name is $APP_NAME "
          echo "Image Name is ${{ env.IMAGE_NAME }}" 
+         
+  job2:
+    runs-on: ubuntu-slim
+    steps:
+    - name: Pring WF Env Vars
+      run: |
+         echo "App name is ${{ env.APP_NAME }}"
+         echo "Image Name is ${{ env.IMAGE_NAME }}" 
+               
