@@ -10,12 +10,22 @@ jobs:
       APP_NAME: 'WindowsApp'
       Owner: 'Hsbc Corp'
     steps:
-    - name: Print Env Vars
+    - name: Step1
+      env:
+        APP_NAME: 'LinuxApp'
+        Rel_Name: 'Aug26'
       run: | 
          echo "App name is ${{ env.APP_NAME }}"
          echo "Owner Name is ${{ env.Owner }} "
          echo "Image Name is ${{ env.IMAGE_NAME }}" 
-         
+         echo "Rel Name is ${{ env.Rel_Name }}" 
+    - name: Step2 
+      run: |
+         echo "App name is ${{ env.APP_NAME }}"
+         echo "Owner Name is ${{ env.Owner }} "
+         echo "Image Name is ${{ env.IMAGE_NAME }}"
+         echo "Rel Name is ${{ env.Rel_Name }}" 
+                 
   job2:
     runs-on: ubuntu-slim
     steps:
