@@ -6,11 +6,14 @@ env:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      APP_NAME: 'WindowsApp'
+      Owner: 'Hsbc Corp'
     steps:
     - name: Print Env Vars
       run: | 
          echo "App name is ${{ env.APP_NAME }}"
-         echo "App name is $APP_NAME "
+         echo "Owner Name is ${{ env.Owner }} "
          echo "Image Name is ${{ env.IMAGE_NAME }}" 
          
   job2:
@@ -20,4 +23,5 @@ jobs:
       run: |
          echo "App name is ${{ env.APP_NAME }}"
          echo "Image Name is ${{ env.IMAGE_NAME }}" 
+         echo "Owner Name is ${{ env.Owner }} "
                
