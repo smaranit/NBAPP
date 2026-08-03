@@ -11,6 +11,7 @@ jobs:
         echo "DOCKER_REG Passwd is ${{ secrets.DOCKER_REG }}"
         sleep 30
   joby:
+    needs: jobx
     runs-on: ubuntu-latest
     steps:
     - name: stepx
