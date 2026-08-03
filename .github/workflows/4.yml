@@ -9,3 +9,10 @@ jobs:
         echo "APPROVER_NAME is ${{ vars.APPROVER_NAME }}"
         echo "Clinet App Ver is ${{ vars.CLIENT_APP_VER }}"
         echo "DOCKER_REG Passwd is ${{ secrets.DOCKER_REG }}"
+        sleep 20
+  joby:
+    runs-on: ubuntu-latest
+    steps:
+    - name: stepx
+      run:
+         echo "Hell This is Job2"       
