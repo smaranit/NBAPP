@@ -6,5 +6,5 @@ jobs:
     steps:
     - name: step1
       run: |
-        echo "APPROVER_NAME is ${{ var.APPROVER_NAME }}"
-        echo "Clinet App Ver is ${{ var.CLIENT_APP_VER }}"
+        echo "APPROVER_NAME is ${{ vars.APPROVER_NAME }}"
+        echo "Clinet App Ver is ${{ vars.CLIENT_APP_VER }}"
