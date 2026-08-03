@@ -1,5 +1,5 @@
 name: Wf-4
-on: workflow_diaptach
+on: workflow_dispatch
 jobs:
   jobx:
     runs-on: ubuntu-slim
