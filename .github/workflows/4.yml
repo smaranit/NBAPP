@@ -1,0 +1,10 @@
+name: Wf-4
+on: workflow_diaptach
+jobs:
+  jobx:
+    runs-on: ubuntu-slim
+    steps:
+    - name: step1
+      run: |
+        echo "APPROVER_NAME is ${{ var.APPROVER_NAME }}"
+        echo "Clinet App Ver is ${{ var.CLIENT_APP_VER }}"
