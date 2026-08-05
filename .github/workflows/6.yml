@@ -14,4 +14,5 @@ jobs:
          echo "Branch Name is ${{ github.ref_name}}"
          echo "Branch Name is ${{ github.ref}}"
          echo "Reponame is ${{github.repository}}"
-         echo "Job Run Number is ${{ github.run_number }}"         
+         echo "Job Run Number is ${{ github.run_number }}"
+         echo "Payload is ${{github.event}} "         
