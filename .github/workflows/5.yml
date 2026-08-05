@@ -1,0 +1,16 @@
+name: WF-5
+on: workflow_dispatch
+env:
+  APP: 'Testapp'
+jobs:
+  jobx:
+    runs-on: ubuntu-slim
+    steps:
+    - name: App name is ${{ env. APP }}
+      run: |
+         echo " Testinh Context"
+         echo "app name is $APP"
+         echo "app name using context  ${{env.APP}}"         
+         
+         
+        
