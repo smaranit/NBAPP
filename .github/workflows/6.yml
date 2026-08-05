@@ -17,6 +17,6 @@ jobs:
          echo "Job Run Number is ${{ github.run_number }}"
          echo "**************************************"
          echo "Payload is ${{ toJSON(github.event) }} " 
-         echo "Commit Msg is ${{github.event.commits.message }}"         
-         echo "Authorname is ${{ github.event.commits.author.name }}"
+         echo "Commit Msg is ${{github.event.commits[0].message }}"         
+         echo "Authorname is ${{ github.event.commits[0].author.name }}"
         
