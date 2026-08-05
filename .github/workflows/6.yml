@@ -16,4 +16,7 @@ jobs:
          echo "Reponame is ${{github.repository}}"
          echo "Job Run Number is ${{ github.run_number }}"
          echo "**************************************"
-         echo "Payload is ${{ toJSON(github.event) }} "         
+         echo "Payload is ${{ toJSON(github.event) }} " 
+         echo "Commit Msg is ${{github.event.message }}"         
+         echo "Authorname is ${{ github.author.name }}"
+         echo "Repo name is ${{ github.repository.name}}"
