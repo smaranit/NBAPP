@@ -11,6 +11,3 @@ jobs:
          echo " Testinh Context"
          echo "app name is $APP"
          echo "app name using context  ${{env.APP}}"         
-         
-         
-  

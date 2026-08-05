@@ -1,0 +1,17 @@
+name: WF-6
+on:
+ - push
+ - workflow_dispatch
+jobs:
+  jobx:
+    runs-on: ubuntu-slim
+    steps:
+    - name: Git Workflow context
+      run: |
+         echo "Actor ${{ github.actor }}"
+         echo "Event name is ${{ github.event_name }}"
+         echo "Commit id is ${{ github.sha }}"
+         echo "Branch Name is ${{ github.ref_name}}"
+         echo "Branch Name is ${{ github.ref}}"
+         echo "Reponame is ${{github.repository}}"
+         echo "Job Run Number is ${{ github.run_number }}"         
