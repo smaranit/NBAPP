@@ -1,0 +1,18 @@
+name: WF-8
+on: workflow_disptach
+jobs:
+  jobx:
+    runs-on: ubuntu-slim
+    steps:
+    - name: step1
+      run: |
+         hostnamectl
+    - name: step2
+      if: ${{ 10==20 }}
+      run: |
+         echo "Todays date $(date)" 
+    - name: step3
+      run: |
+         pwd
+         echo " This is Step3"         
+        
