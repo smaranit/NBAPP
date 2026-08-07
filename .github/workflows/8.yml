@@ -8,9 +8,10 @@ jobs:
       run: |
          hostnamectl
     - name: step2
-      if: ${{ 10==20 }}
+      if: ${{ github.event=='push' }}
       run: |
          echo "Todays date $(date)" 
+         
     - name: step3
       run: |
          pwd
