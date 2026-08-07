@@ -12,7 +12,7 @@ jobs:
       run: |
           echo "This is ${{ github.ref_name }}"
     - name: step3
-      if: ${{ runner.os =='Linux' && github.ref_name='dev' }}  
+      if: ${{ runner.os =='Linux' && github.ref_name=='dev' }}  
       run: |
          echo " Testing "      
      
