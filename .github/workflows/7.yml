@@ -1,0 +1,12 @@
+name: wf7
+on: workflow_dispatch
+jobs:
+  jobx:
+    runs-on: ubuntu-slim
+    steps:
+    - name: runner info
+      run: |
+         echo ${{ toJson(runner)}}
+    -name: Job info 
+     run: |
+       echo ${{ toJson(job) }}
