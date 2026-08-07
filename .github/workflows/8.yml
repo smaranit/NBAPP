@@ -1,5 +1,5 @@
 name: WF-8
-on: workflow_disptach
+on: workflow_dispatch
 jobs:
   jobx:
     runs-on: ubuntu-slim
