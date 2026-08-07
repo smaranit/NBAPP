@@ -1,7 +1,5 @@
 name: WF-6
-on:
- - push
- - workflow_dispatch
+on: workflow_dispatch
 jobs:
   jobx:
     runs-on: ubuntu-slim

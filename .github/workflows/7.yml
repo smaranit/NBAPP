@@ -7,6 +7,6 @@ jobs:
     - name: runner info
       run: |
          echo ${{ toJson(runner)}}
-    -name: Job info 
-     run: |
-       echo ${{ toJson(job) }}
+    - name: Job info 
+      run: |
+         echo ${{ toJson(job) }}
