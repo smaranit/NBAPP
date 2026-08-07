@@ -6,7 +6,7 @@ jobs:
     steps:
     - name: runner info
       run: |
-         echo ${{ toJson(runner)}}
+         echo '${{ toJson(runner)}}'
     - name: Job info 
       run: |
-         echo ${{ toJson(job) }}
+         echo '${{ toJson(job) }}'
