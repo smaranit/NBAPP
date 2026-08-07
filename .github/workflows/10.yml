@@ -1,5 +1,5 @@
 name: Wf-9
-on: workflow-dispatch
+on: workflow_dispatch
 jobs:
   jobx:
     runs-on: ubuntu-latest
