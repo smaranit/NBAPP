@@ -5,8 +5,11 @@ jobs:
     runs-on: ubuntu-slim
     steps:
     - name: Genrate Image Name
+      id: Image_Gen
       run: |
-         pwd
+         echo "image_name=docker.io/svreddy/myapp:v1" > "$GITHUB_OUT"
+         echo "Container_reg=hun.docker.com" >> "$GITHUB_OUT"
     - name: Genrate Image Name 
       run: |
-           echo "Testing"      
+          echo "Image Name is ${{ steps.Image_Gen.image_name }}"
+          echo "Reg URL is ${{ steps.Container_reg.image_name }}"
