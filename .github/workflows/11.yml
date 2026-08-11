@@ -3,6 +3,10 @@ on: workflow_dispatch
 jobs:
   jobx:
     runs-on: ubuntu-slim
+    outputs:
+      image_app_name: ${{ steps.Image_Gen.outputs.image_name }}
+      type_os: 'MyOSTest'
+      
     steps:
     - name: Genrate Image Name
       id: Image_Gen
@@ -13,3 +17,11 @@ jobs:
       run: |
           echo "Image Name is ${{ steps.Image_Gen.outputs.image_name }}"
           echo "Reg URL is ${{ steps.Image_Gen.outputs.Container_reg }}"
+  joby:
+    runs-on: ubuntu-latest
+    needs: jobx
+    steps:
+    - name: accessing Other Job outputs
+      run: |  
+          echo "${{ needs.jobx.outputs.image_app_name }}"
+          echo "${{ needs.jobx.outputs.type_os }}"          
