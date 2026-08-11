@@ -11,5 +11,5 @@ jobs:
          echo "Container_reg=hun.docker.com" >> "$GITHUB_OUTPUT"
     - name: Genrate Image Name 
       run: |
-          echo "Image Name is ${{ steps.Image_Gen.image_name }}"
-          echo "Reg URL is ${{ steps.Container_reg.image_name }}"
+          echo "Image Name is ${{ steps.Image_Gen.outputs.image_name }}"
+          echo "Reg URL is ${{ steps.Container_reg.outputs.image_name }}"
