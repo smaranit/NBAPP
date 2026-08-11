@@ -12,4 +12,4 @@ jobs:
     - name: Genrate Image Name 
       run: |
           echo "Image Name is ${{ steps.Image_Gen.outputs.image_name }}"
-          echo "Reg URL is ${{ steps.Container_reg.outputs.image_name }}"
+          echo "Reg URL is ${{ steps.Image_Gen.outputs.Container_reg }}"
