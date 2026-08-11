@@ -1,0 +1,12 @@
+name: Wf-11
+on: workflow_dispatch
+jobs:
+  jobx:
+    runs-on: ubuntu-slim
+    steps:
+    - name: Genrate Image Name
+      run: |
+         pwd
+    - name: Genrate Image Name 
+      run: |
+           echo "Testing"      
