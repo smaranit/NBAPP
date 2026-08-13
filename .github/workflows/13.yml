@@ -10,7 +10,9 @@ jobs:
          exclude:
          - version: "3.12"
            os: ubuntu-slim
-      
+         include:
+         - version: "3.13"
+           os: ubuntu-latest         
     steps: 
     - name: Step1
       run: |
