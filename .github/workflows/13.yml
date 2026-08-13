@@ -7,9 +7,9 @@ jobs:
       matrix:
          os: [ubuntu-latest,ubuntu-slim]
          version: ["3.10","3.11","3.12"]
-      exclude:
-      - version: ["3.12"]
-        os: [ubuntu-slim]
+         exclude:
+         - version: ["3.12"]
+           os: [ubuntu-slim]
       
     steps: 
     - name: Step1
