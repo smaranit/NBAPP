@@ -10,8 +10,8 @@ jobs:
     steps: 
     - name: Step1
       run: |
-        apt-get update
-        apt-get install python${{ matrix.version}} -y  
+        sudo apt-get update
+        sudo apt-get install python${{ matrix.version}} -y  
     - name: Excute application
       run: 
          python --version      
