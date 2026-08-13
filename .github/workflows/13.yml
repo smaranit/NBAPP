@@ -4,7 +4,7 @@ jobs:
   jobx:
     runs-on: ${{ matrix.os }}
     strategy:
-      max-parallel: 2
+      max-parallel: 1
       matrix:
          os: [ubuntu-latest,ubuntu-slim]
          version: ["3.10","3.11","3.12"]
