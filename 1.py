@@ -1,5 +1,5 @@
 a=2500
-b=5500
+b=55
 c=(a+b)*1
 d=("sheshi","Harsha")
 // print("Change done directlt in Github")
