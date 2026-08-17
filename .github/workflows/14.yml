@@ -2,6 +2,8 @@ name: Wf-14
 on: 
   - push
   - workflow_dispatch
+concurrency:
+  group: grp1  
 jobs:
   jobx:
     runs-on: ubuntu-latest
