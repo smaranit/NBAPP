@@ -9,9 +9,9 @@ jobs:
     - name: setup docker
       uses: docker/setup-buildx-action@v4
     - name: Build Image
+      uses: docker/build-push-action@v7
+      with:
+        tags: myimage:latest
+    - name: Diaplay Images
       run: |
-         docker info 
-         pwd
-         ls -l 
-         docker build -t image1 .         
-    
+        docker image ls      
