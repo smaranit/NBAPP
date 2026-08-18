@@ -4,10 +4,10 @@ jobs:
   jobx:
     runs-on: ubuntu-latest
     steps:
-    - name: Check Git Version
+    - name: Check out
+      uses: actions/checkout@v7  
+    - name: step2 
       run: |
-         git --version
-    - name: Code Checkout
-      run: |
-          git clone https://github.com/smaranit/NBAPP.git
-          ls -l           
+        pwd
+        ls -l         
+
