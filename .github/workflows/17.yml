@@ -11,6 +11,7 @@ jobs:
     - name: Build Image
       uses: docker/build-push-action@v7
       with:
+        context: .
         tags: myimage:latest
     - name: Diaplay Images
       run: |
