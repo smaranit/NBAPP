@@ -6,8 +6,15 @@ jobs:
     steps:
     - name: Check out
       uses: actions/checkout@v7  
-    - name: step2 
+    - name: Install python
       run: |
-        pwd
-        ls -l         
+        sudo apt update
+        sudo apt install software-properties-common -y
+        sudo add-apt-repository ppa:deadsnakes/ppa -y
+        sudo apt update
+        sudo apt install python3.10 python3.10-venv python3.10-dev -y
+    - name: Run the Code
+      run : |
+        python 1.py
+    
 
