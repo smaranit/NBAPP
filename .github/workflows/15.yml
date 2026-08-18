@@ -1,0 +1,13 @@
+name: Code Checkout
+on: workflow_dispatch
+jobs:
+  jobx:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Git Version
+      run: |
+         git --version
+    - name: Code Checkout
+      run: |
+          git clone https://github.com/smaranit/NBAPP.git
+          ls -l           
