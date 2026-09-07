@@ -20,4 +20,16 @@ jobs:
         tags: docker.io/svreddy0111/myximage:latest
         load: true
         push: true
+    - name: Deploy
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ vars.xserverip }}
+        username: ${{ vars.xserveruser }}
+        key: ${{ secrets.XSERVERKEY }}
+        script: |
+          pwd
+          whoami
+          docker info
+          
+  
   
