@@ -13,6 +13,7 @@ jobs:
       with:
         context: .
         tags: myimage:latest
+        load: true
     - name: Diaplay Images
       run: |
         docker image ls      
