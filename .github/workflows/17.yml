@@ -8,12 +8,16 @@ jobs:
       uses: actions/checkout@v7 
     - name: setup docker
       uses: docker/setup-buildx-action@v4
+    - name: Doker Reg Login 
+      uses: docker/login-action@v4
+      with:
+        username: ${{ vars.DOCKERREG_USER }}
+        password: ${{ secrets.DOCKER_REG_PASSWD }}      
     - name: Build Image
       uses: docker/build-push-action@v7
       with:
         context: .
-        tags: myimage:latest
+        tags: docker.io/svreddy0111/myximage:latest
         load: true
-    - name: Diaplay Images
-      run: |
-        docker image ls      
+        push: true
+  
