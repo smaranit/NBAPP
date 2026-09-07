@@ -27,9 +27,8 @@ jobs:
         username: ${{ vars.xserveruser }}
         key: ${{ secrets.XSERVERKEY }}
         script: |
-          pwd
-          whoami
-          docker info
+          docker run -d docker.io/svreddy0111/myximage:latest
+          docker ps -a
           
   
   
